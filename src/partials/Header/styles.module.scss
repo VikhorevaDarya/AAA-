@@ -1,8 +1,14 @@
+@use 'styles/colors' as clr;
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #fff;
+
+  height: 56px;
+
+  padding: 15px;
+  background: clr.$dark-90;
 
   &__logo {
     width: 100px;

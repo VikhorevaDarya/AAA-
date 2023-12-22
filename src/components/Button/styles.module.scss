@@ -1,0 +1,30 @@
+@use 'sass:color';
+@use 'styles/colors' as clr;
+@use 'styles/mixins' as mx;
+
+.button {
+  @include mx.set-font(17px, 26px);
+
+  font-weight: 400;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: clr.$pink-100;
+  color: clr.$white-100;
+
+  padding: 15px 36px;
+
+  border-radius: 60px;
+  border: 0;
+  outline: 0;
+
+  cursor: pointer;
+
+  transition: background var(--transition-duration-ms) ease-in-out;
+
+  &:hover {
+    background: adjust-color($color: clr.$pink-100, $blackness: 15%);
+  }
+}
