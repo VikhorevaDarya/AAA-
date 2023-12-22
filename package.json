@@ -1,0 +1,47 @@
+{
+  "name": "react-ts",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
+    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+  },
+  "packageManager": "yarn@3.6.3",
+  "devDependencies": {
+    "@types/eslint": "8",
+    "@types/json-server": "0",
+    "@types/node": "20.5.7",
+    "@types/prettier": "3",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "4.0.4",
+    "eslint": "8.48.0",
+    "eslint-plugin-prettier": "5.0.0",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "fast-glob": "3.3.1",
+    "json-server": "0.17.3",
+    "prettier": "3.0.3",
+    "sass": "1.66.1",
+    "typescript": "5.2.2",
+    "vite": "4.4.9",
+    "vite-plugin-html": "3.2.0",
+    "vite-plugin-image-optimizer": "1.1.7",
+    "vite-plugin-svg-icons": "2.0.1"
+  },
+  "dependencies": {
+    "@ant-design/cssinjs": "1.17.0",
+    "antd": "5.8.5",
+    "axios": "1.5.0",
+    "classnames": "2.3.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "6.15.0",
+    "zustand": "4.4.1"
+  }
+}
