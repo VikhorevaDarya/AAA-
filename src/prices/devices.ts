@@ -1,9 +1,12 @@
+import { iPhoneModels } from './models'
+
 export const devices = [
   {
     id: 1,
     title: 'Ремонт IPhone',
     iconName: 'phone',
     active: true,
+    models: iPhoneModels,
   },
   {
     id: 2,

@@ -1,1 +1,1 @@
-export { default as useThemeStore } from './themes'
+export { default as useAppStore } from './app'

@@ -1,4 +1,4 @@
-import { Devices } from './components'
+import { Devices, Models } from './components'
 
 import classNames from 'classnames/bind'
 import styles from './styles.module.scss'
@@ -9,6 +9,7 @@ const Prices = () => {
   return (
     <div className={cx('prices')}>
       <Devices />
+      <Models />
     </div>
   )
 }

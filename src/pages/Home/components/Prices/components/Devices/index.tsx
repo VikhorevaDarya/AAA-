@@ -1,5 +1,5 @@
 import { DeviceCard } from './components'
-import { devices } from './config'
+import { devices } from '@/prices/devices'
 
 import classNames from 'classnames/bind'
 import styles from './styles.module.scss'
@@ -11,6 +11,7 @@ const Devices = () => {
     <div className={cx('devices')}>
       {devices.map((device) => (
         <DeviceCard
+          key={device.id}
           title={device.title}
           iconName={device.iconName}
           active={device.active}
