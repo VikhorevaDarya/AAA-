@@ -2,6 +2,7 @@
 @use 'sass:color';
 @use 'utils';
 @use 'themes';
+@use 'config' as cfg;
 
 // Module
 @mixin parse-module($module-map, $prefix: false) {
@@ -16,19 +17,19 @@
 
 // Media
 @mixin tablet-screen {
-  @media only screen and (min-width: ((#{var(--tablet-screen)} + 1) * 1px)) {
+  @media only screen and (min-width: (calc(cfg.$tablet-breakpoint + 1) * 1px)) {
     @content;
   }
 }
 
 @mixin desktop-screen {
-  @media only screen and (min-width: ((#{var(--desktop-screen)} + 1) * 1px)) {
+  @media only screen and (min-width: (calc(cfg.$desktop-breakpoint + 1) * 1px)) {
     @content;
   }
 }
 
 @mixin wide-screen {
-  @media only screen and (min-width: ((#{var(--wide-screen)} + 1) * 1px)) {
+  @media only screen and (min-width: (calc(cfg.$wide-breakpoint + 1) * 1px)) {
     @content;
   }
 }

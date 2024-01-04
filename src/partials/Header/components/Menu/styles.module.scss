@@ -1,0 +1,33 @@
+@use 'sass:color';
+@use 'styles/helpers';
+@use 'styles/mixins' as mx;
+@use 'styles/config' as cfg;
+@use 'styles/colors' as clr;
+
+$menu-bg: rgba(0, 0, 0, 0.85);
+
+.menu {
+  @extend %flex-column;
+  align-items: center;
+
+  background-color: $menu-bg;
+  backdrop-filter: blur(4px);
+  width: 100%;
+
+  &__list {
+    @extend %flex-column;
+    align-items: center;
+
+    gap: 32px;
+
+    list-style-type: none;
+
+    padding: 0;
+    margin: 50px 0 0;
+
+    @include mx.desktop-screen {
+      flex-direction: row;
+      margin: 0;
+    }
+  }
+}

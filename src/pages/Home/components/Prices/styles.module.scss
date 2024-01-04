@@ -1,3 +1,9 @@
 .prices {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  padding: 40px 20px 55px;
+
   background: #f6f6f6;
 }

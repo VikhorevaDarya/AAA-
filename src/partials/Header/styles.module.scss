@@ -1,17 +1,131 @@
 @use 'styles/colors' as clr;
+@use 'styles/mixins' as mx;
+@use 'styles/helpers';
+
+$header-height_mobile: 56px;
+$header-bg: rgba(0, 0, 0, 0.85);
 
 .header {
+  position: fixed;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   height: 56px;
+  width: 100%;
 
   padding: 15px;
-  background: clr.$dark-90;
+  background: $header-bg;
+  color: clr.$white-100;
+
+  &__phone {
+    white-space: nowrap;
+  }
 
   &__logo {
-    width: 100px;
-    height: 30px;
+    width: 60px;
+    height: 70px;
+  }
+
+  &__menu {
+    position: absolute;
+    transition: transform 0.2s ease-in-out;
+    transform: translateY(calc(-100vh - $header-height_mobile * 2));
+
+    @include mx.desktop-screen {
+      position: static;
+      transform: none;
+
+      width: 100%;
+      margin-left: 5.4rem;
+    }
+  }
+
+  &_active {
+    //background-color: $header-bg_active;
+
+    .header__menu {
+      position: absolute;
+      left: 0;
+      top: $header-height_mobile;
+
+      opacity: 1;
+      transform: translateY(0);
+
+      display: flex;
+      width: 100%;
+      height: calc(100vh - $header-height_mobile);
+    }
+
+    .header__menu-trigger {
+      .header__menu-trigger_right {
+        transform: rotate(-45deg);
+        position: relative;
+        bottom: 6.5px;
+      }
+
+      .header__menu-trigger_left {
+        transform: rotate(45deg);
+      }
+
+      .header__menu-trigger_left,
+      .header__menu-trigger_right {
+        background-color: clr.$white-100;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__menu-trigger {
+    @extend %flex-column;
+    gap: 0.3rem;
+
+    position: relative;
+
+    padding: 1.1rem;
+    margin-right: -0.5rem;
+
+    @include mx.desktop-screen {
+      display: none;
+    }
+
+    &::after {
+      background-color: clr.$white-100;
+
+      content: '';
+      display: block;
+      margin: 0 0 0 auto;
+
+      width: 14px;
+      height: 2px;
+
+      transition: background-color var(--transition-duration-ms) ease-in-out;
+    }
+
+    &_white {
+      &::after,
+      .header__menu-trigger_right,
+      .header__menu-trigger_left {
+        background-color: clr.$white-100;
+      }
+    }
+
+    &_left,
+    &_right {
+      transition:
+        transform var(--transition-duration-ms) ease-in-out,
+        background-color var(--transition-duration-ms) ease-in-out;
+
+      background-color: clr.$white-100;
+
+      display: block;
+
+      width: 20px;
+      height: 2px;
+    }
   }
 }
