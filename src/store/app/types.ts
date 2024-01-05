@@ -4,17 +4,18 @@ export type AppState = {
   setDevices: (updatedDevices: DeviceType[]) => void
 }
 
-export type PriceType = {
+export type ProblemType = {
   id: number
   title: string
   count: string
+  time: string
 }
 
 export type ModelType = {
   id: number
   name: string
   active: boolean
-  prices: PriceType[]
+  problems: ProblemType[]
 }
 
 export type DeviceType = {

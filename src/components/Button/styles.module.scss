@@ -5,13 +5,13 @@
 .button {
   @include mx.set-font(17px, 26px);
 
-  font-weight: 400;
+  font-weight: 600;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: clr.$pink-100;
+  background: clr.$green-90;
   color: clr.$white-100;
 
   padding: 15px 36px;
@@ -25,6 +25,6 @@
   transition: background var(--transition-duration-ms) ease-in-out;
 
   &:hover {
-    background: adjust-color($color: clr.$pink-100, $blackness: 15%);
+    background: adjust-color($color: clr.$green-90, $blackness: 10%);
   }
 }

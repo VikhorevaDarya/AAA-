@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { PhoneOutlined } from '@ant-design/icons'
 
 import { Menu } from './components'
 import Logo from '@/assets/icons/logo.gif'
@@ -17,19 +18,27 @@ const Header = () => {
 
   return (
     <header className={cx('header', { header_active: isOpenedMenu })}>
-      <img src={Logo} className={cx('header__logo')} />
-      <span className={cx('header__phone')}>+7 (993) 003 1456</span>
-      <span
-        className={cx('header__menu-trigger', {
-          // 'header__menu-trigger_white': isScrolled,
-        })}
-        onClick={onOpenMenu}
-      >
-        <span className={cx('header__menu-trigger_left')} />
-        <span className={cx('header__menu-trigger_right')} />
-      </span>
-      <div className={cx('header__menu')}>
-        <Menu active={isOpenedMenu} setIsOpened={setIsOpenedMenu} />
+      <div className={cx('header__inner')}>
+        <div className={cx('header__content')}>
+          <img src={Logo} className={cx('header__logo')} />
+          <span className={cx('header__phone')}>
+            <PhoneOutlined />
+            +7 (995) 955 2201
+          </span>
+          <span
+            className={cx('header__menu-trigger', {
+              // 'header__menu-trigger_white': isScrolled,
+            })}
+            onClick={onOpenMenu}
+          >
+            <span className={cx('header__menu-trigger_left')} />
+            <span className={cx('header__menu-trigger_right')} />
+          </span>
+        </div>
+
+        <div className={cx('header__menu')}>
+          <Menu active={isOpenedMenu} setIsOpened={setIsOpenedMenu} />
+        </div>
       </div>
     </header>
   )

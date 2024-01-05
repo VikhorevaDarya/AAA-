@@ -1,31 +1,80 @@
 @use 'styles/colors' as clr;
 @use 'styles/mixins' as mx;
+@use 'styles/config' as cfg;
 @use 'styles/helpers';
 
 $header-height_mobile: 56px;
 $header-bg: rgba(0, 0, 0, 0.85);
 
 .header {
+  display: flex;
+  justify-content: center;
+
   position: fixed;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  z-index: var(--content-z-index);
 
   height: 56px;
   width: 100%;
 
-  padding: 15px;
-  background: $header-bg;
+  background: clr.$black-100;
   color: clr.$white-100;
 
+  @include mx.desktop-screen {
+    height: 100px;
+    position: static;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: calc(cfg.$desktop-breakpoint * 1px);
+
+    padding: 20px;
+
+    @include mx.desktop-screen {
+      padding: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 56px;
+    width: 100%;
+    overflow: hidden;
+
+    @include mx.desktop-screen {
+      width: 50%;
+      height: 112px;
+    }
+  }
+
   &__phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
     white-space: nowrap;
+
+    svg {
+      transform: rotate(90deg);
+    }
   }
 
   &__logo {
     width: 60px;
     height: 70px;
+
+    @include mx.desktop-screen {
+      width: 120px;
+      height: 140px;
+    }
   }
 
   &__menu {
@@ -37,8 +86,9 @@ $header-bg: rgba(0, 0, 0, 0.85);
       position: static;
       transform: none;
 
-      width: 100%;
-      margin-left: 5.4rem;
+      width: 355px;
+      margin-left: 54px;
+      margin-right: 30px;
     }
   }
 

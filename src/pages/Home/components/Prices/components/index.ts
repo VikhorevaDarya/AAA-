@@ -1,2 +1,3 @@
 export { default as DeviceCard } from './DeviceCard'
-export { default as Models } from './Models'
+export { default as Diagnostic } from './Diagnostic'
+export { default as Result } from './Result'

@@ -3,155 +3,179 @@ export const iPhoneModels = [
     id: 1,
     active: false,
     name: 'iPhone 6',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
+        time: 'от 1 часа',
         count: '0 руб.',
       },
       {
         id: 2,
         title: 'Профилактика',
+        time: 'от 1 часа',
         count: '500 руб.',
-      },
-      {
-        id: 3,
-        title: 'Нет изображения',
-        count: '3 600 руб.',
       },
       {
         id: 4,
         title: 'Нет изображения',
+        time: 'от 1 часа',
         count: '3 600 руб.',
       },
       {
         id: 5,
         title: 'Pамена рамки дисплея',
+        time: 'от 1 часа',
         count: '990 руб.',
       },
       {
         id: 6,
         title: 'Не заряжается',
+        time: 'от 1 часа',
         count: '1 990 руб.',
       },
       {
         id: 7,
         title: 'Быстро разряжается',
+        time: 'от 1 часа',
         count: '1 990 руб.',
       },
       {
         id: 8,
         title: 'Аппарат нагревается',
+        time: 'от 1 часа',
         count: '1 990 руб.',
       },
       {
         id: 9,
         title: 'Замена корпуса',
+        time: 'от 1 часа',
         count: '2 900 руб.',
       },
       {
         id: 10,
         title: 'Снятие пароля',
+        time: 'от 1 часа',
         count: '1 500 руб.',
       },
       {
         id: 11,
         title: 'Замена защитного стекла камеры',
+        time: 'от 1 часа',
         count: '990 руб.',
       },
       {
         id: 12,
         title: 'Восстановление iPhone после утопления',
+        time: 'от 1 часа',
         count: '1000 руб.',
       },
       {
         id: 13,
         title: 'Проблема со звонком',
+        time: 'от 1 часа',
         count: '1 500 руб.',
       },
       {
         id: 14,
         title: 'Не слышно собеседника',
+        time: 'от 1 часа',
         count: '1 500 руб.',
       },
       {
         id: 15,
         title: 'Собеседник не слышит',
+        time: 'от 1 часа',
         count: '1 500 руб.',
       },
       {
         id: 16,
         title: 'Фронтальная камера',
+        time: 'от 1 часа',
         count: '1 500 руб.',
       },
       {
         id: 17,
         title: 'Кнопка включения/выключения',
+        time: 'от 1 часа',
         count: '1 500 руб.',
       },
       {
         id: 18,
         title: 'Кнопки громкости',
+        time: 'от 1 часа',
         count: '1 500 руб.',
       },
       {
         id: 19,
         title: 'Нет звука в наушниках',
+        time: 'от 1 часа',
         count: '1 500 руб.',
       },
       {
         id: 20,
         title: 'Кнопка Home',
+        time: 'от 1 часа',
         count: '1 500 руб.',
       },
       {
         id: 21,
         title: 'Застряла сим-карта',
+        time: 'от 1 часа',
         count: '500 руб.',
       },
       {
         id: 22,
         title: 'Задняя камера',
+        time: 'от 1 часа',
         count: '1 500 руб.',
       },
       {
         id: 23,
         title: 'Не работает виброзвонок',
+        time: 'от 1 часа',
         count: '1 000 руб.',
       },
       {
         id: 24,
         title: 'Зависает телефон',
+        time: 'от 1 часа',
         count: '1 500 руб.',
       },
       {
         id: 25,
         title: 'Просит подключение к iTunes',
+        time: 'от 1 часа',
         count: '1 500 руб.',
       },
       {
         id: 26,
         title: 'Исправление нарушений геометрии корпуса',
+        time: 'от 1 часа',
         count: '1 000 руб.',
       },
       {
         id: 27,
         title: 'Увеличение памяти до 32 Гб',
+        time: 'от 1 часа',
         count: '3 900 руб.',
       },
       {
         id: 28,
         title: 'Увеличение памяти до 64 Гб',
+        time: 'от 1 часа',
         count: '3 900 руб.',
       },
       {
         id: 29,
         title: 'Увеличение памяти до 128 Гб',
+        time: 'от 1 часа',
         count: '6 900 руб.',
       },
       {
         id: 30,
         title: 'Разбито стекло',
+        time: 'от 1 часа',
         count: '1 900 руб.',
       },
     ],
@@ -160,11 +184,11 @@ export const iPhoneModels = [
     id: 2,
     active: false,
     name: 'iPhone 4S',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
-        count: '0 руб.',
+        count: '5 руб.',
       },
       {
         id: 2,
@@ -317,7 +341,7 @@ export const iPhoneModels = [
     id: 3,
     active: false,
     name: 'iPhone 5',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -474,7 +498,7 @@ export const iPhoneModels = [
     id: 4,
     active: false,
     name: 'iPhone 5S',
-    prices: [
+    problems: [
       {
         title: '',
         count: '',
@@ -485,7 +509,7 @@ export const iPhoneModels = [
     id: 5,
     active: false,
     name: 'iPhone SE',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -642,7 +666,7 @@ export const iPhoneModels = [
     id: 6,
     active: false,
     name: 'iPhone 4',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -799,7 +823,7 @@ export const iPhoneModels = [
     id: 7,
     active: false,
     name: 'iPhone 6 Plus',
-    prices: [
+    problems: [
       {
         title: '',
         count: '',
@@ -810,7 +834,7 @@ export const iPhoneModels = [
     id: 8,
     active: false,
     name: 'iPhone 6S',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -967,7 +991,7 @@ export const iPhoneModels = [
     id: 9,
     active: false,
     name: 'iPhone 6S Plus',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -1124,7 +1148,7 @@ export const iPhoneModels = [
     id: 10,
     active: false,
     name: 'iPhone 7',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -1281,7 +1305,7 @@ export const iPhoneModels = [
     id: 11,
     active: false,
     name: 'iPhone 7 Plus',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -1438,7 +1462,7 @@ export const iPhoneModels = [
     id: 12,
     active: false,
     name: 'iPhone 8',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -1595,7 +1619,7 @@ export const iPhoneModels = [
     id: 13,
     active: false,
     name: 'iPhone 8 Plus',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -1752,7 +1776,7 @@ export const iPhoneModels = [
     id: 14,
     active: false,
     name: 'iPhone X',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -1909,7 +1933,7 @@ export const iPhoneModels = [
     id: 15,
     active: false,
     name: 'iPhone XS',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -2066,7 +2090,7 @@ export const iPhoneModels = [
     id: 16,
     active: false,
     name: 'iPhone XS Max',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -2223,7 +2247,7 @@ export const iPhoneModels = [
     id: 17,
     active: false,
     name: 'iPhone XR',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -2380,7 +2404,7 @@ export const iPhoneModels = [
     id: 18,
     active: false,
     name: 'iPhone 11',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -2537,7 +2561,7 @@ export const iPhoneModels = [
     id: 19,
     active: false,
     name: 'iPhone 11 Pro',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -2694,7 +2718,7 @@ export const iPhoneModels = [
     id: 20,
     active: false,
     name: 'iPhone 11 Pro Max',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -2851,7 +2875,7 @@ export const iPhoneModels = [
     id: 21,
     active: false,
     name: 'iPhone 12 Mini',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -3008,7 +3032,7 @@ export const iPhoneModels = [
     id: 22,
     active: false,
     name: 'iPhone 12',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -3165,7 +3189,7 @@ export const iPhoneModels = [
     id: 23,
     active: false,
     name: 'iPhone 12 Pro',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -3322,7 +3346,7 @@ export const iPhoneModels = [
     id: 24,
     active: false,
     name: 'iPhone 12 Pro Max',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -3479,7 +3503,7 @@ export const iPhoneModels = [
     id: 25,
     active: false,
     name: 'iPhone 13 Mini',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -3636,7 +3660,7 @@ export const iPhoneModels = [
     id: 26,
     active: false,
     name: 'iPhone 13',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -3793,7 +3817,7 @@ export const iPhoneModels = [
     id: 27,
     active: false,
     name: 'iPhone 13 Pro',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -3950,7 +3974,7 @@ export const iPhoneModels = [
     id: 28,
     active: false,
     name: 'iPhone 13 Pro Max',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -4107,7 +4131,7 @@ export const iPhoneModels = [
     id: 29,
     active: false,
     name: 'iPhone SE2022',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -4264,7 +4288,7 @@ export const iPhoneModels = [
     id: 30,
     active: false,
     name: 'iPhone 14',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -4421,7 +4445,7 @@ export const iPhoneModels = [
     id: 31,
     active: false,
     name: 'iPhone 14 Plus',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -4578,7 +4602,7 @@ export const iPhoneModels = [
     id: 32,
     active: false,
     name: 'iPhone 14 Pro',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',
@@ -4735,7 +4759,7 @@ export const iPhoneModels = [
     id: 33,
     active: false,
     name: 'iPhone 14 Pro Max',
-    prices: [
+    problems: [
       {
         id: 1,
         title: 'Диагностика',

@@ -1,5 +1,5 @@
 import { useAppStore } from '@/store'
-import { DeviceCard, Models } from './components'
+import { DeviceCard, Diagnostic } from './components'
 
 import classNames from 'classnames/bind'
 import styles from './styles.module.scss'
@@ -23,13 +23,17 @@ const Prices = () => {
   }
   return (
     <div className={cx('prices')}>
-      {devices.map((device) => (
-        <div key={device.id}>
-          <DeviceCard device={device} handleClick={onDeviceCardClick} />
+      <div className={cx('prices__list')}>
+        {devices.map((device) => (
+          <div key={device.id} className={cx('prices__item')}>
+            <DeviceCard device={device} handleClick={onDeviceCardClick} />
 
-          {device.active && <Models models={device.models} />}
-        </div>
-      ))}
+            <div className={cx('prices__diagnostic_mobile')}>
+              {device.active && <Diagnostic models={device.models} />}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
