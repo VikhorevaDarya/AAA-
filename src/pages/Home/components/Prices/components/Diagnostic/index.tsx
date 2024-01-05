@@ -1,13 +1,13 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Select } from 'antd'
 
 import { useAppStore } from '@/store'
 import { ModelType, ProblemType } from '@/store/app/types'
 import { Button } from '@/components'
+import Result from '../Result'
 
 import classNames from 'classnames/bind'
 import styles from './styles.module.scss'
-import Result from '../Result'
 
 type ModelsProps = {
   models: ModelType[]
@@ -31,12 +31,10 @@ const Models = ({ models }: ModelsProps) => {
     label: model.name,
   }))
 
-  const selectProblemOptions = models
-    ?.filter((model) => model.active)[0]
-    ?.problems.map((problem) => ({
-      value: problem.id,
-      label: problem.title,
-    }))
+  const selectProblemOptions = selectedModel?.problems.map((problem) => ({
+    value: problem.id,
+    label: problem.title,
+  }))
 
   const handleModelSelect = (id: number) => {
     const updatedDevices = devices.map((device) =>
@@ -62,33 +60,43 @@ const Models = ({ models }: ModelsProps) => {
   }
 
   const handleProblemSelect = (id: number) => {
-    const problem = models
-      ?.filter((model) => model.active)[0]
-      .problems.find((problem) => problem.id === id) as ProblemType
+    const problem = selectedModel?.problems.find(
+      (problem) => problem.id === id,
+    ) as ProblemType
 
     setSelectedProblem(problem)
   }
 
+  useEffect(() => {
+    setSelectedModel(null)
+    setSelectedProblem(null)
+
+    console.log(models)
+  }, [models])
+
   return (
     <div className={cx('diagnostic')}>
-      <Select
-        options={selectModelsOptions}
-        placeholder='Выберите модель устройства'
-        className={cx('diagnostic__select')}
-        size='large'
-        onSelect={handleModelSelect}
-      />
-
-      {selectedModel && (
+      <div className={cx('diagnostic__selects')}>
         <Select
-          placeholder='Выберите проблему'
+          options={selectModelsOptions}
+          placeholder='Выберите модель устройства'
           className={cx('diagnostic__select')}
+          value={selectedModel?.id}
           size='large'
-          value={selectedProblem?.id}
-          options={selectProblemOptions}
-          onSelect={handleProblemSelect}
+          onSelect={handleModelSelect}
         />
-      )}
+
+        {selectedModel && (
+          <Select
+            placeholder='Выберите проблему'
+            className={cx('diagnostic__select')}
+            size='large'
+            value={selectedProblem?.id}
+            options={selectProblemOptions}
+            onSelect={handleProblemSelect}
+          />
+        )}
+      </div>
 
       {selectedProblem && (
         <div className={cx('diagnostic__result')}>

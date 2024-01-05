@@ -21,6 +21,7 @@ export type ModelType = {
 export type DeviceType = {
   id: number
   title: string
+  name: string
   iconName: string
   active: boolean
   models: ModelType[]

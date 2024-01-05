@@ -8,14 +8,8 @@
   align-items: center;
   justify-content: center;
 
-  //padding: 55px 29px;
-
   background: clr.$dark-80;
   color: clr.$white-90;
-
-  // @include mx.desktop-screen {
-  //   padding: 55px 55px 70px;
-  // }
 
   &__inner {
     width: 100vw;
@@ -38,7 +32,7 @@
 
     padding: 0 20px;
 
-    top: 80px;
+    top: 90px;
 
     @include mx.tablet-screen {
       align-items: flex-start;

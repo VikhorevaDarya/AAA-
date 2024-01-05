@@ -1,17 +1,30 @@
+@use 'styles/mixins' as mx;
+@use 'styles/colors' as clr;
+
 .result {
   width: 100%;
 
   &__title {
     font-size: 18px;
+    font-weight: 500;
 
     color: #4f4f4f;
+
+    @include mx.desktop-screen {
+      font-size: 22px;
+    }
   }
 
   &__icon {
     width: 24px;
     height: 24px;
 
-    color: #bdbdbd;
+    color: clr.$green-100;
+
+    @include mx.desktop-screen {
+      width: 36px;
+      height: 36px;
+    }
   }
 
   &__content {

@@ -1,3 +1,84 @@
+@use 'styles/colors' as clr;
+@use 'styles/mixins' as mx;
+@use 'styles/config' as cfg;
+
 .footer {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  color: clr.$white-100;
+  background: clr.$dark-80;
+
+  padding: 40px 20px;
+
+  &__content {
+    width: 100%;
+    max-width: calc(cfg.$desktop-breakpoint * 1px);
+
+    @include mx.desktop-screen {
+      padding: 0 20px;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 300px;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    @include mx.tablet-screen {
+      max-width: 500px;
+    }
+  }
+
+  &__description {
+    display: block;
+
+    margin-top: 30px;
+  }
+
+  &__subtitle {
+    display: block;
+
+    font-size: 16px;
+
+    margin-top: 10px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 18px;
+  }
+
+  &__metro {
+    display: flex;
+    align-items: center;
+
+    height: 18px;
+
+    margin-top: 30px;
+  }
+
+  &__address {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    @include mx.tablet-screen {
+      gap: 30px;
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+
+    margin: 0;
+
+    @include mx.desktop-screen {
+      font-size: 30px;
+    }
+  }
 }

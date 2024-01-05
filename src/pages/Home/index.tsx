@@ -1,4 +1,4 @@
-import { Greeting, Prices } from './components'
+import { Feedbacks, Greeting, Prices } from './components'
 
 import classNames from 'classnames/bind'
 import styles from './styles.module.scss'
@@ -10,6 +10,7 @@ const HomePage = () => {
     <div className={cx('home')}>
       <Greeting />
       <Prices />
+      <Feedbacks />
     </div>
   )
 }
