@@ -11,6 +11,7 @@
   --negative-z-index: -1;
   --overlay-z-index: calc(var(--base-z-index) * 99);
   --content-z-index: calc(var(--overlay-z-index) + 1);
+  --swiper-theme-color: #719b25 !important;
 }
 
 .root {

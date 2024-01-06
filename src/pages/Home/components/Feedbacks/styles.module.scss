@@ -1,0 +1,69 @@
+@use 'styles/config' as cfg;
+@use 'styles/mixins' as mx;
+@use 'styles/colors' as clr;
+
+.feedbacks {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  background: clr.$white-90;
+
+  padding: 40px 20px;
+
+  @include mx.desktop-screen {
+    padding: 40px 0 20px;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: calc(cfg.$desktop-breakpoint * 1px);
+  }
+
+  &__swiper {
+    padding-bottom: 40px !important;
+  }
+
+  &__arrow {
+    position: absolute;
+    z-index: var(--overlay-z-index);
+
+    top: 80px;
+
+    color: clr.$green-100;
+
+    cursor: pointer;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    &_right {
+      right: -50px;
+    }
+
+    &_left {
+      left: -50px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 20px 0;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 20px;
+
+    @include mx.desktop-screen {
+      font-size: 30px;
+    }
+  }
+}

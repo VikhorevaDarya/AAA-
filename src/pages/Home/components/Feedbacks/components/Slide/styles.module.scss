@@ -1,0 +1,68 @@
+@use 'styles/colors' as clr;
+@use 'styles/mixins' as mx;
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 10px;
+  background: adjust-color($color: clr.$green-10, $lightness: 20%);
+
+  height: 190px;
+  width: 100%;
+
+  padding: 20px;
+
+  @include mx.tablet-screen {
+    //max-width: 380px;
+  }
+
+  &__header {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__rating {
+    display: flex;
+    gap: 2px;
+
+    margin-top: 3px;
+
+    color: clr.$yellow-100;
+
+    svg {
+      width: 12px;
+      height: 12px;
+    }
+  }
+
+  &__date {
+    display: block;
+
+    color: clr.$dark-70;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    opacity: 0.6;
+
+    margin-top: auto;
+  }
+
+  &__title {
+    color: clr.$dark-70;
+
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__content {
+    color: clr.$dark-70;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    margin-top: 10px;
+  }
+}

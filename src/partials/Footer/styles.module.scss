@@ -1,6 +1,7 @@
 @use 'styles/colors' as clr;
 @use 'styles/mixins' as mx;
 @use 'styles/config' as cfg;
+@use 'styles/helpers';
 
 .footer {
   display: flex;
@@ -49,20 +50,33 @@
   &__icon {
     width: 24px;
     height: 18px;
+
+    &_yellow {
+      color: clr.$yellow-100;
+    }
+
+    &_green {
+      color: green;
+    }
   }
 
   &__metro {
     display: flex;
     align-items: center;
+    gap: 15px;
 
     height: 18px;
 
     margin-top: 30px;
   }
 
-  &__address {
+  &__metro-item {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+  }
+
+  &__address {
+    @extend %flex-column;
 
     gap: 20px;
 

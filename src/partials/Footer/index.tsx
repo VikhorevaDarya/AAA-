@@ -25,8 +25,20 @@ const Footer = () => {
             <h3 className={cx('footer__title')}>Как нас найти?</h3>
 
             <span className={cx('footer__metro')}>
-              <SvgIcon name='metro' className={cx('footer__icon')} />{' '}
-              Новокузнецкая, Третьяковская
+              <span className={cx('footer__metro-item')}>
+                <SvgIcon
+                  name='metro'
+                  className={cx(['footer__icon', 'footer__icon_green'])}
+                />{' '}
+                Новокузнецкая{' '}
+              </span>
+              <span className={cx('footer__metro-item')}>
+                <SvgIcon
+                  name='metro'
+                  className={cx(['footer__icon', 'footer__icon_yellow'])}
+                />{' '}
+                Третьяковская
+              </span>
             </span>
 
             <span className={cx('footer__subtitle')}>

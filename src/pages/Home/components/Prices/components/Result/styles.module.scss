@@ -8,7 +8,7 @@
     font-size: 18px;
     font-weight: 500;
 
-    color: #4f4f4f;
+    color: clr.$dark-70;
 
     @include mx.desktop-screen {
       font-size: 22px;
@@ -41,6 +41,6 @@
 
     font-size: 20px;
 
-    color: #4f4f4f;
+    color: clr.$dark-70;
   }
 }

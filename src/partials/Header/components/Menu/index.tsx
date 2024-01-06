@@ -5,7 +5,7 @@ import styles from './styles.module.scss'
 
 type MenuItemType = {
   title: string
-  target: string | number
+  target: string
 }
 
 interface MenuProps {
@@ -16,7 +16,7 @@ interface MenuProps {
 const cx = classNames.bind(styles)
 
 const Menu = ({ active, setIsOpened }: MenuProps) => {
-  const onMenuItemClick = () => {
+  const onMenuItemClick = (target: string) => {
     setIsOpened(false)
   }
 
@@ -27,7 +27,7 @@ const Menu = ({ active, setIsOpened }: MenuProps) => {
           <li
             key={index}
             className={cx('menu__item')}
-            onClick={() => onMenuItemClick(String(item.target))}
+            onClick={() => onMenuItemClick(item.target)}
           >
             {item.title}
           </li>

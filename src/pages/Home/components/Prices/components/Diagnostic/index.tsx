@@ -70,19 +70,17 @@ const Models = ({ models }: ModelsProps) => {
   useEffect(() => {
     setSelectedModel(null)
     setSelectedProblem(null)
-
-    console.log(models)
   }, [models])
 
   return (
     <div className={cx('diagnostic')}>
       <div className={cx('diagnostic__selects')}>
         <Select
-          options={selectModelsOptions}
           placeholder='Выберите модель устройства'
           className={cx('diagnostic__select')}
-          value={selectedModel?.id}
           size='large'
+          value={selectedModel?.id}
+          options={selectModelsOptions}
           onSelect={handleModelSelect}
         />
 
