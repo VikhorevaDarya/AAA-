@@ -1,1 +1,5 @@
 export { default as iPhoneModels } from './iphone'
+export { default as iPadModels } from './ipad'
+export { default as iWatchModels } from './iwatch'
+export { default as airpodsModels } from './airpods'
+export { default as macbookModels } from './macbook'

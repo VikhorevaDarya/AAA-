@@ -1,4 +1,10 @@
-import { iPhoneModels } from './models'
+import {
+  iPhoneModels,
+  iPadModels,
+  iWatchModels,
+  airpodsModels,
+  macbookModels,
+} from './models'
 
 export const devices = [
   {
@@ -15,6 +21,7 @@ export const devices = [
     title: 'Ремонт IPad',
     iconName: 'ipad',
     active: false,
+    models: iPadModels,
   },
   {
     id: 3,
@@ -22,6 +29,7 @@ export const devices = [
     title: 'Ремонт AirPods',
     iconName: 'airpods',
     active: false,
+    models: airpodsModels,
   },
   {
     id: 4,
@@ -29,6 +37,7 @@ export const devices = [
     title: 'Ремонт Mac',
     iconName: 'mac',
     active: false,
+    models: macbookModels,
   },
   {
     id: 5,
@@ -36,5 +45,6 @@ export const devices = [
     title: 'Ремонт Apple Watch',
     iconName: 'iwatch',
     active: false,
+    models: iWatchModels,
   },
 ]

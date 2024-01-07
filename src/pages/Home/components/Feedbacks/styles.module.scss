@@ -28,7 +28,7 @@
     position: absolute;
     z-index: var(--overlay-z-index);
 
-    top: 80px;
+    top: 100px;
 
     color: clr.$green-100;
 
@@ -55,7 +55,11 @@
     align-items: center;
     gap: 15px;
 
-    padding: 20px 0;
+    padding-top: 20px;
+
+    @include mx.desktop-screen {
+      padding: 20px 0;
+    }
   }
 
   &__title {

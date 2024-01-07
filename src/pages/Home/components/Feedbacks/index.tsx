@@ -16,6 +16,22 @@ import 'swiper/css/pagination'
 
 const cx = classNames.bind(styles)
 
+const swiperProps = {
+  slidesPerView: 1,
+  spaceBetween: 26,
+  pagination: true,
+  className: cx('feedbacks__swiper'),
+  breakpoints: {
+    745: {
+      spaceBetween: 10,
+      slidesPerView: 2,
+    },
+    900: {
+      slidesPerView: 3,
+    },
+  },
+}
+
 const Feedbacks = () => {
   const [swiperInstance, setSwiperInstance] = useState<SwiperType | null>(null)
   const swiperRef = useRef()
@@ -45,21 +61,9 @@ const Feedbacks = () => {
 
           <Swiper
             ref={swiperRef}
-            slidesPerView={1}
-            spaceBetween={26}
-            pagination={true}
-            pagination-dynamic-bullets={true}
+            {...swiperProps}
+            paginationDynamicBullets={true}
             modules={[Pagination]}
-            className={cx('feedbacks__swiper')}
-            breakpoints={{
-              745: {
-                spaceBetween: 10,
-                slidesPerView: 2,
-              },
-              900: {
-                slidesPerView: 3,
-              },
-            }}
           >
             {feedbacks.map((feedback, index) => (
               <SwiperSlide key={index}>
