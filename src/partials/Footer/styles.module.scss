@@ -12,6 +12,9 @@
 
   padding: 40px 20px;
 
+  scroll-margin-top: 40px;
+  scroll-snap-margin-top: 40px;
+
   &__content {
     width: 100%;
     max-width: calc(cfg.$desktop-breakpoint * 1px);

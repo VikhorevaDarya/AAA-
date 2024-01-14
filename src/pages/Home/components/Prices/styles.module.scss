@@ -12,8 +12,14 @@
 
   width: 100%;
 
+  scroll-margin-top: 40px;
+  scroll-snap-margin-top: 40px;
+
   @include mx.desktop-screen {
     padding: 10px 0 30px;
+
+    scroll-margin-top: 10px;
+    scroll-snap-margin-top: 10px;
   }
 
   &__list {

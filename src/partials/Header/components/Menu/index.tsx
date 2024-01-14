@@ -18,6 +18,12 @@ const cx = classNames.bind(styles)
 const Menu = ({ active, setIsOpened }: MenuProps) => {
   const onMenuItemClick = (target: string) => {
     setIsOpened(false)
+
+    const HTMLTarget = document.getElementById(target) as HTMLElement
+
+    HTMLTarget.scrollIntoView({
+      behavior: 'smooth',
+    })
   }
 
   return (

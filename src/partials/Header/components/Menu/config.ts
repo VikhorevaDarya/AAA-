@@ -1,18 +1,18 @@
 export const menuItems = [
   {
     title: 'Гарантия',
-    target: '',
+    target: '#garanty',
   },
   {
     title: 'Стоимость',
-    target: '',
+    target: '#prices',
   },
   {
     title: 'Контакты',
-    target: '',
+    target: '#contacts',
   },
   {
     title: 'Отзывы',
-    target: '',
+    target: '#feedbacks',
   },
 ]

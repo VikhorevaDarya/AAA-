@@ -21,10 +21,10 @@ const Header = () => {
       <div className={cx('header__inner')}>
         <div className={cx('header__content')}>
           <img src={Logo} className={cx('header__logo')} />
-          <span className={cx('header__phone')}>
+          <a className={cx('header__phone')} href='tel:+7 (995) 955 2201'>
             <PhoneOutlined />
             +7 (995) 955 2201
-          </span>
+          </a>
           <span
             className={cx('header__menu-trigger', {
               // 'header__menu-trigger_white': isScrolled,

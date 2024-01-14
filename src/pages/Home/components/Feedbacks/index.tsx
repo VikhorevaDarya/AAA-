@@ -49,7 +49,7 @@ const Feedbacks = () => {
   }, [swiperRef])
 
   return (
-    <div className={cx('feedbacks')}>
+    <div className={cx('feedbacks')} id='#feedbacks'>
       <div className={cx('feedbacks__content')}>
         <h3 className={cx('feedbacks__title')}>Отзывы клиентов:</h3>
 

@@ -29,7 +29,7 @@ const Prices = () => {
     setSelectedDevice({ ...device, active: true })
   }
   return (
-    <div className={cx('prices')}>
+    <div className={cx('prices')} id='#prices'>
       <div className={cx('prices__list')}>
         {devices.map((device) => (
           <div key={device.id} className={cx('prices__item')}>
@@ -49,7 +49,7 @@ const Prices = () => {
           className={cx(['prices__diagnostic', 'prices__diagnostic_desktop'])}
         >
           <h3 className={cx('prices__diagnostic-title')}>
-            Выберите модель {selectedDevice?.name} и поломку:
+            Выберите модель {selectedDevice?.name} и неисправность:
           </h3>
           {selectedDevice && <Diagnostic models={selectedDevice.models} />}
         </div>

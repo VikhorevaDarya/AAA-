@@ -8,7 +8,7 @@ const cx = classNames.bind(styles)
 
 const Footer = () => {
   return (
-    <Layout.Footer className={cx('footer')}>
+    <Layout.Footer className={cx('footer')} id='#contacts'>
       <div className={cx('footer__content')}>
         <div className={cx('footer__address')}>
           <div className={cx('footer__map')}>
