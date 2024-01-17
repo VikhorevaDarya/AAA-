@@ -9,14 +9,10 @@
   border-radius: 10px;
   background: adjust-color($color: clr.$green-10, $lightness: 20%);
 
-  height: 190px;
+  height: 220px;
   width: 100%;
 
   padding: 20px;
-
-  @include mx.tablet-screen {
-    //max-width: 380px;
-  }
 
   &__header {
     display: flex;
