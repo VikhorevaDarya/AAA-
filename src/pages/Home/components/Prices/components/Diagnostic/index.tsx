@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { Select } from 'antd'
 
 import { useAppStore } from '@/store'
@@ -21,9 +21,10 @@ const Models = ({ models }: ModelsProps) => {
   )
   const [selectedModel, setSelectedModel] = useState<null | ModelType>(null)
 
-  const [devices, setDevices] = useAppStore((state) => [
+  const [devices, setDevices, setIsOpenModal] = useAppStore((state) => [
     state.devices,
     state.setDevices,
+    state.setIsOpenModal,
   ])
 
   const selectModelsOptions = models?.map((model) => ({
@@ -67,6 +68,10 @@ const Models = ({ models }: ModelsProps) => {
     setSelectedProblem(problem)
   }
 
+  const onClick = useCallback(() => {
+    setIsOpenModal(true)
+  }, [])
+
   useEffect(() => {
     setSelectedModel(null)
     setSelectedProblem(null)
@@ -99,7 +104,9 @@ const Models = ({ models }: ModelsProps) => {
       {selectedProblem && (
         <div className={cx('diagnostic__result')}>
           <Result problem={selectedProblem} />
-          <Button className={cx('diagnostic__button')}>Оставить заявку</Button>
+          <Button className={cx('diagnostic__button')} onClick={onClick}>
+            Оставить заявку
+          </Button>
         </div>
       )}
     </div>

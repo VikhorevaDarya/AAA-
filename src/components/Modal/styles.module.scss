@@ -1,0 +1,36 @@
+.modal {
+  max-width: 400px;
+
+  &__form-item {
+    .ant-row {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__form {
+    padding: 0 1rem;
+
+    label {
+      font-weight: 500;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__button {
+    background-color: black;
+    color: white;
+
+    margin: 0 0 0 auto;
+  }
+
+  &__button-wrapper {
+    display: flex;
+    justify-content: end;
+
+    margin-right: 2.5rem;
+  }
+}

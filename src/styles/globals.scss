@@ -43,3 +43,7 @@ body {
     -webkit-tap-highlight-color: transparent;
   }
 }
+
+.ant-modal-content {
+  max-height: 630px !important;
+}

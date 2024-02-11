@@ -1,3 +1,6 @@
+import { useCallback } from 'react'
+
+import { useAppStore } from '@/store'
 import { Button } from '@/components'
 import BackgroundImg from '@/assets/images/bg.png'
 
@@ -7,6 +10,12 @@ import styles from './styles.module.scss'
 const cx = classNames.bind(styles)
 
 const Greeting = () => {
+  const [setIsOpenModal] = useAppStore((state) => [state.setIsOpenModal])
+
+  const onClick = useCallback(() => {
+    setIsOpenModal(true)
+  }, [])
+
   return (
     <div className={cx('greeting')}>
       <div className={cx('greeting__inner')}>
@@ -52,7 +61,7 @@ const Greeting = () => {
             </p>
           </div>
 
-          <Button className={cx('greeting__button')}>
+          <Button className={cx('greeting__button')} onClick={onClick}>
             Записаться на диагностику
           </Button>
         </div>

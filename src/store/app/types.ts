@@ -4,6 +4,7 @@ export type AppState = {
 
   setDevices: (updatedDevices: DeviceType[]) => void
   setIsOpenModal: (updatedValue: boolean) => void
+  sendMessage: (message: string) => void
 }
 
 export type ProblemType = {
