@@ -24,8 +24,11 @@ const ModalWindow = () => {
     state.sendMessage,
   ])
 
+  const [form] = Form.useForm()
+
   const onCancel = useCallback(() => {
     setIsOpenModal(false)
+    form.resetFields()
   }, [])
 
   const handleSubmit = (values: FormValues) => {
@@ -54,7 +57,7 @@ const ModalWindow = () => {
     ${comment}
     `
 
-    sendMessage(message)
+    sendMessage(message).then(onCancel)
   }
 
   return (
@@ -71,6 +74,7 @@ const ModalWindow = () => {
       <Form
         onFinish={handleSubmit}
         layout='vertical'
+        form={form}
         className={cx('modal__form')}
       >
         <Form.Item
@@ -93,7 +97,7 @@ const ModalWindow = () => {
             },
           ]}
         >
-          <Input />
+          <Input type='phone' />
         </Form.Item>
 
         <Form.Item

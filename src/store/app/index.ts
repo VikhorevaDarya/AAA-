@@ -29,7 +29,7 @@ const useAppStore = create<AppState>()(
     },
 
     sendMessage(message: string) {
-      http().post(url, {
+      return http().post(url, {
         chat_id: CHAT_ID,
         message_thread_id: THREAD_ID,
         parse_mode: 'html',

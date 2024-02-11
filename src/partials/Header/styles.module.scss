@@ -69,6 +69,12 @@ $header-bg: rgba(0, 0, 0, 0.85);
     svg {
       transform: rotate(90deg);
     }
+
+    transition: color var(--transition-duration-ms) ease-in-out;
+
+    &:hover {
+      color: adjust-color($color: clr.$white-100, $blackness: 20%);
+    }
   }
 
   &__logo {

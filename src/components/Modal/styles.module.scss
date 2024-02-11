@@ -1,5 +1,8 @@
+@use 'styles/colors' as clr;
+
 .modal {
   max-width: 400px;
+  width: auto !important;
 
   &__form-item {
     .ant-row {
@@ -25,6 +28,14 @@
     color: white;
 
     margin: 0 0 0 auto;
+
+    &:hover {
+      color: white !important;
+      border-color: clr.$green-80 !important;
+
+      transform: scale(1.06);
+      transition: transform var(--transition-duration-ms) ease-in-out;
+    }
   }
 
   &__button-wrapper {
