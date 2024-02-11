@@ -112,8 +112,8 @@ const ModalWindow = () => {
           <Select
             options={[
               { label: 'Перезвонить', value: 'call' },
-              { label: 'Написать в WhatsApp', value: 'wa' },
-              { label: 'Написать в telegram', value: 'tg' },
+              { label: 'Написать в WhatsApp', value: 'Написать в WhatsApp' },
+              { label: 'Написать в Telegram', value: 'Написать в Telegram' },
             ]}
             defaultValue={{ label: 'Перезвонить', value: 'call' }}
           />

@@ -50,8 +50,16 @@ $header-bg: rgba(0, 0, 0, 0.85);
     overflow: hidden;
 
     @include mx.desktop-screen {
-      width: 50%;
+      width: 63%;
       height: 112px;
+    }
+  }
+
+  &__links {
+    display: none;
+
+    @include mx.desktop-screen {
+      display: block;
     }
   }
 

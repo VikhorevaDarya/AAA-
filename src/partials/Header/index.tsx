@@ -6,6 +6,7 @@ import Logo from '@/assets/icons/logo.gif'
 
 import classNames from 'classnames/bind'
 import styles from './styles.module.scss'
+import { ContactLinks } from '@/components'
 
 const cx = classNames.bind(styles)
 
@@ -25,6 +26,11 @@ const Header = () => {
             <PhoneOutlined />
             +7 (995) 955 2201
           </a>
+
+          <span className={cx('header__links')}>
+            <ContactLinks />
+          </span>
+
           <span
             className={cx('header__menu-trigger', {
               // 'header__menu-trigger_white': isScrolled,

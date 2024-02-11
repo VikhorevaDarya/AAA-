@@ -1,7 +1,7 @@
 import { useCallback } from 'react'
 
 import { useAppStore } from '@/store'
-import { Button } from '@/components'
+import { Button, ContactLinks } from '@/components'
 import BackgroundImg from '@/assets/images/bg.png'
 
 import classNames from 'classnames/bind'

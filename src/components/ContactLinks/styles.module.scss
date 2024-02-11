@@ -1,0 +1,25 @@
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  color: white;
+
+  &__icon {
+    color: white;
+
+    width: 14px;
+    height: 14px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+
+    color: white;
+    font-size: 14px;
+
+    text-decoration: none;
+  }
+}
