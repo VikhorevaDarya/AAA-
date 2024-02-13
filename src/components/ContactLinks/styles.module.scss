@@ -1,15 +1,27 @@
+@use 'styles/colors' as clr;
+
 .links {
   display: flex;
   align-items: center;
   gap: 1rem;
 
-  color: white;
+  color: clr.$white-100;
+  backdrop-filter: blur(10px);
 
   &__icon {
-    color: white;
+    color: adjust-color($color: clr.$white-100, $blackness: 50%);
 
-    width: 14px;
-    height: 14px;
+    width: 32px;
+    height: 32px;
+
+    transition:
+      transform var(--transition-duration-ms) ease-in-out,
+      color var(--transition-duration-ms) ease-in-out;
+
+    &:hover {
+      transform: scale(1.2) rotate(5deg);
+      color: clr.$white-100;
+    }
   }
 
   &__item {
@@ -17,7 +29,7 @@
     align-items: center;
     gap: 0.2rem;
 
-    color: white;
+    color: clr.$white-100;
     font-size: 14px;
 
     text-decoration: none;

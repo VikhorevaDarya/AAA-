@@ -20,7 +20,7 @@
 
   &__image {
     width: 1200px;
-    height: 549px;
+    height: 565px;
   }
 
   &__content {
@@ -43,6 +43,16 @@
     }
   }
 
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 1.6rem;
+    margin-top: 30px;
+  }
+
   &__title {
     @include mx.set-font(30px, 50px);
 
@@ -50,10 +60,6 @@
     text-align: center;
 
     margin: 0;
-  }
-
-  &__button {
-    margin-top: 30px;
   }
 
   &__text {

@@ -28,7 +28,7 @@ const ContactLinks = () => {
       {links.map((link) => (
         <a className={cx('links__item')} href={link.href}>
           <SvgIcon name={link.iconName} className={cx('links__icon')} />
-          {link.label}
+          {/* {link.label} */}
         </a>
       ))}
     </div>

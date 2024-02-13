@@ -27,10 +27,6 @@ const Header = () => {
             +7 (995) 955 2201
           </a>
 
-          <span className={cx('header__links')}>
-            <ContactLinks />
-          </span>
-
           <span
             className={cx('header__menu-trigger', {
               // 'header__menu-trigger_white': isScrolled,

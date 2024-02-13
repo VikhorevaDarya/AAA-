@@ -43,11 +43,49 @@
   }
 
   &__subtitle {
+    font-size: 16px;
+
+    margin: 0;
+
+    @include mx.desktop-screen {
+      font-size: 22px;
+    }
+  }
+
+  &__text {
     display: block;
 
     font-size: 16px;
 
-    margin-top: 10px;
+    &_phone {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      color: clr.$white-100;
+
+      white-space: nowrap;
+
+      text-decoration: none;
+
+      svg {
+        transform: rotate(90deg);
+      }
+
+      transition: color var(--transition-duration-ms) ease-in-out;
+
+      &:hover {
+        color: adjust-color($color: clr.$white-100, $blackness: 20%);
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-top: 32px;
   }
 
   &__icon {
@@ -69,8 +107,6 @@
     gap: 15px;
 
     height: 18px;
-
-    margin-top: 30px;
   }
 
   &__metro-item {

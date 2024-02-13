@@ -1,5 +1,6 @@
-import { SvgIcon } from '@/components'
+import { ContactLinks, SvgIcon } from '@/components'
 import { Layout } from 'antd'
+import { PhoneOutlined } from '@ant-design/icons'
 
 import classNames from 'classnames/bind'
 import styles from './styles.module.scss'
@@ -21,28 +22,46 @@ const Footer = () => {
             ></iframe>
           </div>
 
-          <div className={cx('footer__text')}>
+          <div className={cx('footer__wrapper')}>
             <h3 className={cx('footer__title')}>Как нас найти?</h3>
 
-            <span className={cx('footer__metro')}>
-              <span className={cx('footer__metro-item')}>
-                <SvgIcon
-                  name='metro'
-                  className={cx(['footer__icon', 'footer__icon_green'])}
-                />{' '}
-                Новокузнецкая{' '}
+            <span className={cx('footer__item')}>
+              <h4 className={cx('footer__subtitle')}>Наш адрес:</h4>
+              <span className={cx('footer__metro')}>
+                <span className={cx('footer__metro-item')}>
+                  <SvgIcon
+                    name='metro'
+                    className={cx(['footer__icon', 'footer__icon_green'])}
+                  />{' '}
+                  Новокузнецкая{' '}
+                </span>
+                <span className={cx('footer__metro-item')}>
+                  <SvgIcon
+                    name='metro'
+                    className={cx(['footer__icon', 'footer__icon_yellow'])}
+                  />{' '}
+                  Третьяковская
+                </span>
               </span>
-              <span className={cx('footer__metro-item')}>
-                <SvgIcon
-                  name='metro'
-                  className={cx(['footer__icon', 'footer__icon_yellow'])}
-                />{' '}
-                Третьяковская
+
+              <span className={cx('footer__text')}>
+                📍 Улица Большая Ордынка, 13/9с1
               </span>
             </span>
 
-            <span className={cx('footer__subtitle')}>
-              Улица Большая Ордынка, 13/9с1
+            <span className={cx('footer__item')}>
+              <h4 className={cx('footer__subtitle')}>Контактный телефон:</h4>
+              <a
+                className={cx(['footer__text', 'footer__text_phone'])}
+                href='tel:+7 (995) 955 2201'
+              >
+                <PhoneOutlined />
+                +7 (995) 955 2201
+              </a>
+            </span>
+
+            <span className={cx('footer__item')}>
+              <ContactLinks />
             </span>
 
             <span className={cx('footer__description')}>

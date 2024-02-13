@@ -61,9 +61,12 @@ const Greeting = () => {
             </p>
           </div>
 
-          <Button className={cx('greeting__button')} onClick={onClick}>
-            Записаться на диагностику
-          </Button>
+          <div className={cx('greeting__actions')}>
+            <Button className={cx('greeting__button')} onClick={onClick}>
+              Записаться на диагностику
+            </Button>
+            <ContactLinks />
+          </div>
         </div>
       </div>
     </div>
