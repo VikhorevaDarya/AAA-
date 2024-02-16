@@ -26,6 +26,13 @@ const ModalWindow = () => {
 
   const [form] = Form.useForm()
 
+  const selectOptions = [
+    { label: 'Перезвонить', value: 'call' },
+    { label: 'Написать в WhatsApp', value: 'Написать в WhatsApp' },
+    { label: 'Написать в Telegram', value: 'Написать в Telegram' },
+  ]
+  const selectDefaultValue = { label: 'Перезвонить', value: 'call' }
+
   const onCancel = useCallback(() => {
     setIsOpenModal(false)
     form.resetFields()
@@ -109,14 +116,7 @@ const ModalWindow = () => {
         </Form.Item>
 
         <Form.Item label='Как с вами связаться?' name='connect'>
-          <Select
-            options={[
-              { label: 'Перезвонить', value: 'call' },
-              { label: 'Написать в WhatsApp', value: 'Написать в WhatsApp' },
-              { label: 'Написать в Telegram', value: 'Написать в Telegram' },
-            ]}
-            defaultValue={{ label: 'Перезвонить', value: 'call' }}
-          />
+          <Select options={selectOptions} defaultValue={selectDefaultValue} />
         </Form.Item>
 
         <Form.Item label='Комментарий' name='comment'>
